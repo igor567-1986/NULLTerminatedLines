@@ -1,4 +1,4 @@
-#include<iostream>
+п»ї#include<iostream>
 #include<Windows.h>
 using namespace std;
 using std::cout;
@@ -23,29 +23,29 @@ void main()
 	
 	//char str[] = { 'H','e','l','l','o',0 };
 	char str[] = "Hello";
-	//str - строковая переменная
-	//"Hello" - строковая константа
+	//str - СЃС‚СЂРѕРєРѕРІР°СЏ РїРµСЂРµРјРµРЅРЅР°СЏ
+	//"Hello" - СЃС‚СЂРѕРєРѕРІР°СЏ РєРѕРЅСЃС‚Р°РЅС‚Р°
 	cout << str << endl;
 	cout << typeid (str).name() << endl;
 	cout << typeid ("Hello").name() << endl;
 #endif // EXAMPLE_1
 	const int SIZE = 256;
 	char str[SIZE] = {};
-	cout << "Введите строку:";
+	cout << "Р’РІРµРґРёС‚Рµ СЃС‚СЂРѕРєСѓ:";
 	//cin >> str;
 	SetConsoleCP(1251);
 	cin.getline(str, SIZE);
 	cout << str << endl;
-	cout << "Длина строки: " << StringLength(str) <<" символов " << endl;
-	cout << "Длина строки: " << strlen(str) <<" символов " << endl;
-	cout << "Длина строки: " << sizeof(str)  << endl;
+	cout << "Р”Р»РёРЅР° СЃС‚СЂРѕРєРё: " << StringLength(str) <<" СЃРёРјРІРѕР»РѕРІ " << endl;
+	cout << "Р”Р»РёРЅР° СЃС‚СЂРѕРєРё: " << strlen(str) <<" СЃРёРјРІРѕР»РѕРІ " << endl;
+	cout << "Р”Р»РёРЅР° СЃС‚СЂРѕРєРё: " << sizeof(str)  << endl;
 	upper_case(str);
 	cout << str << endl;
 	lower_case(str);
 	cout << str << endl;
 	shrink(str);
 	cout << str << endl;
-	cout << (is_palindrome(str) ? "" : "НЕ") << "является палиндромом";
+	cout << (is_palindrome(str) ? "" : "РќР•") << "СЏРІР»СЏРµС‚СЃСЏ РїР°Р»РёРЅРґСЂРѕРјРѕРј";
 
 }
 int StringLength(const char str[])
@@ -59,8 +59,8 @@ void upper_case(char str[])
 	for (int i = 0; str[i]; i++)
 	{
 		/*if (str[i] >= 'a' && str[i] <= 'z') str[i] -= ' ';
-		if (str[i]>= 'а'&& str[i] <='я') str[i] -= ' ';
-		if (str[i] == 'ё')str[i] = 'Ё';*/
+		if (str[i]>= 'Р°'&& str[i] <='СЏ') str[i] -= ' ';
+		if (str[i] == 'С‘')str[i] = 'РЃ';*/
 		str[i] = toupper(str[i]);
     }
 }
