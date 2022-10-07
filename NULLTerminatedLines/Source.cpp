@@ -13,7 +13,7 @@ int StringLength(const char str[]);
 void upper_case( char str[]);
 void lower_case(char str[]);
 void shrink(char str[]);
-void remove_symbol(char str[], const char symbol);
+// void remove_symbol(char str[], const char symbol);
 bool is_palindrome(char str[]);
 
 void main()
@@ -31,21 +31,20 @@ void main()
 #endif // EXAMPLE_1
 	const int SIZE = 256;
 	char str[SIZE] = {};
-	cout << "Введите строку:";
-	//cin >> str;
+	/*cout << "Введите строку:";
 	SetConsoleCP(1251);
 	cin.getline(str, SIZE);
 	cout << str << endl;
 	cout << "Длина строки: " << StringLength(str) <<" символов " << endl;
 	cout << "Длина строки: " << strlen(str) <<" символов " << endl;
-	cout << "Длина строки: " << sizeof(str)  << endl;
+	cout << "Длина строки в байтах: " << sizeof(str)  << endl;
 	upper_case(str);
 	cout << str << endl;
 	lower_case(str);
 	cout << str << endl;
 	shrink(str);
-	cout << str << endl;
-	cout << (is_palindrome(str) ? "" : "НЕ") << "является палиндромом";
+	cout << str << endl;*/
+	cout << (is_palindrome(str) ? "" : "НЕ") << " является палиндромом";
 
 }
 int StringLength(const char str[])
@@ -91,7 +90,7 @@ bool is_palindrome(char str[])
 	remove_symbol(buffer, ' ');
 	int size = strlen(buffer);
 	for (int i = 0; i < size; i++)
-		if (str[i] != str[size - 1 - i])
+		if (buffer[i] != buffer[size - 1 - i])
 		{
 			delete[] buffer;
 			return false;
