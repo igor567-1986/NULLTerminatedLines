@@ -130,9 +130,12 @@ int  hex_to_dec(char str[])
 	int number = 0, size = strlen(str);
 	for (int i = 0; i < size; i++)
 	{
-		if (str[i] >= '0' && str[i] <= '9')number += str[i] - '0';
-		else if (str[i] >= 'a' && str[i] <= 'f')number += str[i] - 'a' + 10;
-		else if (str[i] >= 'A' && str[i] <= 'F')number += str[i] - 'A' + 10;
+		int intermediate_result = 0,N=1;
+		if (str[i] >= '0' && str[i] <= '9')intermediate_result += str[i] - '0';
+		else if (str[i] >= 'a' && str[i] <= 'f')intermediate_result += str[i] - 'a' + 10;
+		else if (str[i] >= 'A' && str[i] <= 'F')intermediate_result += str[i] - 'A' + 10;
+		for (int j = 1; j < size - i; j++)N *= 16;
+		number += (intermediate_result * N);
 	}
 	return number;
 }
