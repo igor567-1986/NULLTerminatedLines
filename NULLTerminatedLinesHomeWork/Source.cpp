@@ -1,4 +1,4 @@
-#include<iostream>
+п»ї#include<iostream>
 #include <Windows.h>
 using namespace std;
 using std::cout;
@@ -20,7 +20,7 @@ void main()
 {
 	setlocale(LC_ALL, "");
 	const int SIZE = 256;
-	char str[SIZE] = {}; //"Мишки   очень любят  мед.Почему и   кто поймет."
+	char str[SIZE] = {}; //"РњРёС€РєРё   РѕС‡РµРЅСЊ Р»СЋР±СЏС‚  РјРµРґ.РџРѕС‡РµРјСѓ Рё   РєС‚Рѕ РїРѕР№РјРµС‚."
 	SetConsoleCP(1251);
 	/*cout << str << endl;
 	to_upper(str);
@@ -29,14 +29,14 @@ void main()
 	cout << str << endl;
 	shrink(str);
 	cout << str << endl;*/
-	cout << "Введите строку:";	cin.getline(str, SIZE);
-	//cout << (is_palindrome(str) ? "" : "НЕ") << " является палиндромом"<<endl;
-	cout << (is_int_number(str) ? "" : "НЕ") << " является десятичным числом"<<endl;
+	cout << "Р’РІРµРґРёС‚Рµ СЃС‚СЂРѕРєСѓ:";	cin.getline(str, SIZE);
+	//cout << (is_palindrome(str) ? "" : "РќР•") << " СЏРІР»СЏРµС‚СЃСЏ РїР°Р»РёРЅРґСЂРѕРјРѕРј"<<endl;
+	cout << (is_int_number(str) ? "" : "РќР•") << " СЏРІР»СЏРµС‚СЃСЏ РґРµСЃСЏС‚РёС‡РЅС‹Рј С‡РёСЃР»РѕРј"<<endl;
 	if (is_int_number(str))cout << to_int_number(str)<< endl;
-	cout << (is_bin_number(str) ? "" : "НЕ") << " является двоичным числом" << endl;
-	if (is_bin_number(str))cout <<"При переводе из двоичной в десятичную="<< bin_to_dec(str) << endl;
-	cout << (is_hex_number(str) ? "" : "НЕ") << " является шестнадцатиричным числом" << endl;
-	if (is_hex_number(str))cout << "При переводе из шестнадцатиричной в десятичную=" << hex_to_dec(str) << endl;
+	cout << (is_bin_number(str) ? "" : "РќР•") << " СЏРІР»СЏРµС‚СЃСЏ РґРІРѕРёС‡РЅС‹Рј С‡РёСЃР»РѕРј" << endl;
+	if (is_bin_number(str))cout <<"РџСЂРё РїРµСЂРµРІРѕРґРµ РёР· РґРІРѕРёС‡РЅРѕР№ РІ РґРµСЃСЏС‚РёС‡РЅСѓСЋ="<< bin_to_dec(str) << endl;
+	cout << (is_hex_number(str) ? "" : "РќР•") << " СЏРІР»СЏРµС‚СЃСЏ С€РµСЃС‚РЅР°РґС†Р°С‚РёСЂРёС‡РЅС‹Рј С‡РёСЃР»РѕРј" << endl;
+	if (is_hex_number(str))cout << "РџСЂРё РїРµСЂРµРІРѕРґРµ РёР· С€РµСЃС‚РЅР°РґС†Р°С‚РёСЂРёС‡РЅРѕР№ РІ РґРµСЃСЏС‚РёС‡РЅСѓСЋ=" << hex_to_dec(str) << endl;
 }
 void to_upper(char str[])
 {
